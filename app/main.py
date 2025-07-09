@@ -4,6 +4,8 @@ def copy_file(command: str) -> None:
         return
     if "cp" not in command:
         return
+    elif command[1] == command[2]:
+        return
     try:
         with (open(f"{command[1]}", "r") as file,
               open(f"{command[2]}", "w") as file_copy):
